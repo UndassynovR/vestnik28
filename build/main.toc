@@ -1,0 +1,4 @@
+\xpg@aux {}{russian}
+\contentsline {chapter}{\numberline {1}Горное и нефтегазовое дело}{1}{chapter.1}%
+\contentsline {section}{ \\ \normalsize \itshape ИННОВАЦИОННЫЙ СПОСОБ ОЧИСТКИ НЕФТЯНЫХ ТРУБ ОТ ПАРАФИНОВЫХ ОТЛОЖЕНИЙ ДЛЯ ПОВЫШЕНИЯ НЕФТЕОТДАЧИ }{1}{section*.1}%
+\contentsline {section}{ \\ \normalsize \itshape ТҰТҚЫРЛЫҒЫ ЖОҒАРЫ МҰНАЙДЫ ӨНДІРУДЕ ҰҢҒЫМАНЫҢ ТҮП АЙМАҒЫН ӨҢДЕУ ӘДІСТЕРІ }{13}{section*.3}%
