@@ -1,0 +1,849 @@
+\id{IRSTI 61.51.21}{}
+
+{\bfseries PROCESS SIMULATION AND EVALUATION OF METHANOL RECOVERY UNIT}
+
+{\bfseries USING ASPEN HYSYS}
+
+{\bfseries \tsp{1,2}K.G.
+Satenov}{\bfseries ,
+\tsp{1-4}Ye.M. Suleimen}
+\envelope 
+
+\emph{\tsp{1}LLP KMG Engineering, Astana, Kazakhstan,}
+
+\emph{\tsp{2}Kazakh University of Technology and Business
+named after K.Kulazhanov, Astana, Kazakhstan,}
+
+\emph{\tsp{3}Sh.Ualikhanov Kokshetau University, Laboratory
+of NMR Spectroscopy, Kazakhstan,}
+
+\emph{\tsp{4}LLP Institute of Applied Chemistry, Astana,
+Kazakhstan}
+
+\envelope Corresponding author:
+syerlan75@yandex.kz
+
+Natural gas is one of the most economical and environmentally friendly
+energy sources, playing a crucial role in Kazakhstan's gas industry. The
+optimization of gas processing technologies, particularly methanol
+regeneration, is essential for improving efficiency and reducing
+operational costs. Methanol (CH\tsb{3}OH) is widely used in
+the oil and gas industry as a hydrate inhibitor, but its high
+consumption necessitates regeneration to minimize costs and
+environmental impact.
+
+This study focuses on the technical and economic feasibility of methanol
+regeneration from methanol-water solutions (MWS) at the ``X'' gas
+processing plant in western Kazakhstan. The Aspen HYSYS software was
+used to simulate the methanol recovery process, employing the
+Peng-Robinson equation of state. The study explored different process
+configurations, considering separation, purification, and rectification
+technologies.
+
+{\bfseries Keywords}: Methanol-Water Solutions (MWS), Complex gas treatment
+plant (CGTP), The Peng-Robinson equation of state with the Stryjek and
+Vera modification (PRSV), Air Cooler Unit (ACU).
+
+{\bfseries ASPEN HYSYS КӨМЕГІМЕН МЕТАНОЛДЫ ҚАЛПЫНА КЕЛТІРУ ҚОНДЫРҒЫСЫН
+ТЕХНОЛОГИЯЛЫҚ МОДЕЛЬДЕУ ЖӘНЕ БАҒАЛАУ}
+
+{\bfseries \tsp{1,2}Қ.Г. Сатенов, \tsp{1-4}Е.М.
+Сүлеймен\envelope }
+
+\emph{\tsp{1}ҚМГ Инжиниринг ЖШС, Астана қ., Қазақстан,}
+
+\emph{\tsp{2}}\emph{Қ. Құлажанов атындағы Қазақ технология
+және бизнес университеті, Астана, Қазақстан,}
+
+\emph{\tsp{3}Ш.Уәлиханов атындағы Көкшетау Университеті, ЯМР
+Спектроскопия зертханасы, Қазақстан,}
+
+\emph{\tsp{4} Қолданбалы Химия Институты ЖШС, Астана,
+Қазақстан,}
+
+e-mail:syerlan75@yandex.kz
+
+Табиғи газ - Қазақстанның газ өнеркәсібінде маңызды рөл атқаратын, ең
+үнемді әрі экологиялық тұрғыдан тиімді энергия көздерінің бірі. Газ
+өңдеу технологияларын, әсіресе метанолды регенерациялау үдерісін
+оңтайландыру - тиімділікті арттырып, операциялық шығындарды азайту үшін
+маңызды. Метанол (CH₃OH) мұнай-газ саласында гидрат ингибиторы ретінде
+кеңінен қолданылады, алайда оның жоғары тұтыну мөлшері шығындар мен
+экологиялық әсерді азайту үшін оны регенерациялауды қажет етеді.
+
+Бұл зерттеу Батыс Қазақстандағы ``X'' газ өңдеу зауытында метанол-сулы
+ерітінділерден (МСЕ) метанолды қалпына келтірудің техникалық және
+экономикалық орындылығына бағытталған. Метанолды қалпына келтіру үдерісі
+Aspen HYSYS бағдарламасы арқылы модельденіп, Peng--Robinson күй теңдеуі
+қолданылды. Зерттеу барысында бөлу, тазарту және ректификациялау
+технологияларын қамтитын түрлі үдеріс конфигурациялары қарастырылды.
+
+{\bfseries Түйін сөздер:} Метанол-сулы ерітінділер (МСЕ), Кешенді газ өңдеу
+зауыты (КГӨЗ), Стрижек және Вера модификациясымен Пенг-Робинсон күй
+теңдеуі (PRSV), Ауа салқындатқыш құрылғысы (АСҚ).
+
+{\bfseries МОДЕЛИРОВАНИЕ ПРОЦЕССА И ОЦЕНКА РАБОТЫ УСТАНОВКИ ИЗВЛЕЧЕНИЯ
+МЕТАНОЛА С ИСПОЛЬЗОВАНИЕМ ASPEN HYSYS}
+
+{\bfseries \tsp{1,2}К.Г. Сатенов, \tsp{1-4}Е.М.
+Сулеймен\envelope }
+
+\emph{\tsp{1}ТОО КМГ Инжиниринг, Астана, Казахстан,}
+
+\emph{\tsp{2}Казахский университет технологии и бизнеса им.
+К. Кулажанова, Астана, Казахстан,}
+
+\emph{\tsp{3}Кокшетауский университет им. Ш.Уалиханова,
+лаборатория ЯМР-спектроскопии, Казахстан,}
+
+\emph{\tsp{4}ТОО "Институт прикладной химии", Астана,
+Казахстан,}
+
+e-mail:syerlan75@yandex.kz
+
+Природный газ - один из самых экономичных и экологически безопасных
+источников энергии, играющий важную роль в газовой промышленности
+Казахстана. Оптимизация технологий переработки газа, в частности
+регенерации метанола, имеет ключевое значение для повышения
+эффективности и снижения эксплуатационных затрат. Метанол (CH₃OH) широко
+применяется в нефтегазовой отрасли в качестве ингибитора
+гидратообразования, однако его высокий расход требует регенерации для
+минимизации затрат и снижения экологического воздействия.
+
+В данном исследовании рассматривается техническая и экономическая
+целесообразность регенерации метанола из метанол-водных растворов (МВР)
+на газоперерабатывающем заводе ``X'' в Западном Казахстане. Для
+моделирования процесса восстановления метанола использовалось
+программное обеспечение Aspen HYSYS с применением уравнения состояния
+Пенга-Робинсона. В исследовании были рассмотрены различные конфигурации
+процесса, включая технологии разделения, очистки и ректификации.
+
+{\bfseries Ключевые слова:} Водометанольный раствор (ВМР), Установка
+комплексной подготовки газа (УКПГ), Уравнение состояния Пенга--Робинсона
+с модификацией Стрижека и Веры (PRSV), Воздушный охладитель (ВО).
+
+{\bfseries Introduction.} Natural gas is one of the most economical sources
+of fuel and energy resources, occupying a special place in the world raw
+material base. The reason is its high consumer characteristics, low
+production and transportation costs, as well as widespread use in many
+areas of human activity {[}1-3{]}.
+
+Great hopes are placed on natural gas as the cheapest, highly
+environmentally friendly fuel in preparation for the transition to the
+wider use of alternative non-traditional types of electricity (solar,
+wind, water, geothermal energy).
+
+The gas industry of Kazakhstan is an important source of income and
+occupies an important place in the socio-economic development of the
+Republic of Kazakhstan, therefore significant funds are allocated for
+its development and modernization {[}4-7{]}. The development of
+resource-saving technologies is an important area for the oil and gas
+industry.
+
+Complex gas treatment plants are a set of direct and indirect equipment
+designed for collecting and processing natural gas and gas condensate.
+
+They include separation, purification, drying and cooling units, as well
+as booster compressor stations. When developing oil and gas fields in a
+sharply continental climate, it is necessary to consider the possibility
+of hydrate formation {[}8-11{]}.
+
+In technologies for production, treatment and transportation of oil and
+gas, gas hydrates because serious problems associated with disruption of
+these operating processes {[}12-13{]}.
+
+Gas hydrates are solid crystalline compounds that are formed under
+certain thermobaric conditions from an aqueous solution, ice, water
+vapor and low molecular weight gases. They have an appearance similar to
+ice or snow. Methanol (CH\tsb{3}OH) is used in the oil and gas
+industry as a hydrate inhibitor.
+
+In order to optimize operating costs, by reducing the volume of methanol
+purchases and its delivery to the point of use, methanol regeneration
+units are integrated into the gas treatment process, while the economic
+efficiency and feasibility of methanol regeneration is determined for
+each individual case, considering the impact various conditions and
+factors in the conditions present at a particular enterprise.
+
+{\bfseries Materials and methods}. The most optimal technology for methanol
+regeneration is the MWS rectification process using additional equipment
+for purification from mechanical impurities, salts, and hydrogen
+sulfide~{[}11{]}.
+
+The purpose of studying the methanol regeneration process is to
+determine the technical feasibility and economic feasibility of
+regenerating methanol from MWS released during the preparation of well
+fluid at the processing units of the ``X'' field, located in the western
+region of Kazakhstan.
+
+In order to determine the technical feasibility of methanol
+regeneration, it is necessary to determine the quality of the base MWS,
+as well as the volume of purified methanol yield. Assess capital costs
+for the construction of a new MRU and cost-effectiveness analysis.
+
+The methanol recovery plant was modeled to produce methanol by treating
+industrial wastewater from a CGTP, which is then suitable for injection
+into the reservoir, using the Aspen HYSYS software package, designed to
+study the processes of preparing oil and gas feedstocks~{[}14-15{]}.
+
+The thermodynamic package used was the Peng-Robinson equation of state
+modified by Stryjek and Vera (PRSV), which more accurately predicts the
+phase behavior of hydrocarbon systems, especially systems consisting of
+dissimilar components.
+
+The PRSV equation of state performs rigorous three-phase instantaneous
+calculations for aqueous systems containing H\tsb{2}O,
+CH\tsb{3}OH or glycols, as well as systems containing other
+hydrocarbons or non-hydrocarbon compounds in the second liquid phase
+{[}16-17{]}.
+
+{\bfseries Results and discussion.} The goal of this process simulations
+was to produce the final methanol product at the ``X'' field gas
+processing plant located in the western region of Kazakhstan, with the
+following requirements:
+
+- methanol (CH\tsb{3}OH) - not less than 95 \% wt.;
+
+- hydrogen sulfide (H\tsb{2}S) - no more than 1 ppm;
+
+- water (H\tsb{2}O) - no more than 5 \% wt.
+
+Table 1 presents the indicators for methanol concentration (\% wt.) and
+MWS consumption (m\tsp{3}/day), adopted for two options,
+designated as Base Option - (B1) and Alternative Option - (B2).
+
+{\bfseries Table 1- Indicators for methanol concentration (\% wt) and MWS
+consumption}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3064}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3303}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3632}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Options}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Methanol concentration, \% wt}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries MWS consumption, m\tsp{3}/day}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Basic option - (B1) & 1.5 & 50 \\
+%% Alternative option - (B2) & 1.31 & 8 \\
+%% \end{longtable}
+
+To characterize the MWS at the inlet to the new MRU in the Aspen HYSYS
+program, the compositions of HC, total suspended particles (TSP) and
+salts for both options were specified as follows (Table 2-4):
+
+{\bfseries Table 2} - {\bfseries Composition and properties of hydrocarbons in
+MWS}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3245}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3191}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3564}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries HC composition}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mole fractions}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mass fractions}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% CH\tsb{4} & 0.0420 & 0.0058 \\
+%% C\tsb{2}H\tsb{6} & 0.0420 & 0.0108 \\
+%% C\tsb{3}H\tsb{8} & 0.0699 & 0.0264 \\
+%% \emph{iso}-C\tsb{4}H\tsb{10} & 0.0420 & 0.0208 \\
+%% \emph{n}-C\tsb{4}H\tsb{10} & 0.0420 & 0.0208 \\
+%% \emph{iso}-C\tsb{5}H\tsb{12} & 0.0559 & 0.0345 \\
+%% \emph{n}-C\tsb{5}H\tsb{12} & 0.0559 & 0.0345 \\
+%% \emph{n}-C\tsb{6}H\tsb{14} & 0.0629 & 0.0464 \\
+%% \emph{n}-C\tsb{7}H\tsb{16} & 0.0559 & 0.0479 \\
+%% \emph{n}-C\tsb{8}H\tsb{18} & 0.0559 & 0.0546 \\
+%% \emph{n}-C\tsb{9}H\tsb{20} & 0.0559 & 0.0613 \\
+%% \emph{n}-C\tsb{10}H\tsb{22} & 0.0699 & 0.0851 \\
+%% \emph{n}-С\tsb{11} & 0.0699 & 0.0934 \\
+%% \emph{n}-С\tsb{12} & 0.0699 & 0.1018 \\
+%% \emph{n}-С\tsb{13} & 0.0699 & 0.1102 \\
+%% \emph{n}-С\tsb{14} & 0.0699 & 0.1186 \\
+%% \emph{n}-С\tsb{15} & 0.0699 & 0.1270 \\
+%% {\bfseries Total} & {\bfseries 1.0000} & {\bfseries 1.0000} \\
+%% \end{longtable}
+
+To model the properties of TSP in MWS in Aspen HYSYS, the hypothetical
+components (pseudo-components) tab was used.
+
+The Aspen HYSYS library allows you to create hypothetical components to
+describe hydrocarbon feedstocks. In the calculations, kaolin was used as
+a hypothetical component, having a molar mass of 258.0 and a density of
+2600.0 kg/m\tsp{3}, as the most suitable component in terms
+of characteristics (Table 3).
+
+{\bfseries Table 3}- {\bfseries Composition and properties of TSP in MWS}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3509}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3158}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Composition}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mole fractions}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mass fractions}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% TSP & 1.0000 & 1.0000 \\
+%% \multicolumn{3}{@{}>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
+%% {\bfseries Properties}} \\
+%% Molecular weight* &
+%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+%% 258.0} \\
+%% Density (kg/m\tsp{3}) &
+%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+%% 2600.0} \\
+%% Diameter (mm) &
+%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6667} + 2\tabcolsep}@{}}{%
+%% 1.000} \\
+%% \end{longtable}
+
+\emph{*hypothetical component - kaolin}
+
+{\bfseries Table 4}- {\bfseries Composition of salts in MWS}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2880}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3560}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3560}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Composition}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mole fractions}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Mass fractions}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% NaCl & 0.7085 & 0.5000 \\
+%% Na\tsb{2}SO\tsb{4} & 0.2915 & 0.5000 \\
+%% \end{longtable}
+
+When modeling the new MRU, the need to remove such undesirable
+components as hydrocarbons, salts, TSP and H\tsb{2}S from the
+input flow of the MWS was considered. The design of the new MRU was
+supplemented with the following equipment: a three-phase separator with
+a filter-coalescer for removing hydrocarbons, a hydrocyclone for
+removing TSP, an evaporator for removing salts, a stripping column for
+removing H\tsb{2}S.
+
+The final process diagrams of the new unit for the two options are
+identical, in Fig.1 shows a diagram of the new MRU only for the basic
+version (B1). The operating parameters of the stripping column for two
+options are shown in Fig.2-3.
+
+\fig{c/image4}{}
+
+{\bfseries Fig.1- Process diagram of the new MRU for option B1}
+
+\fig{c/image5}{}
+
+{\bfseries Fig.2- Parameters of the stripping column for
+H\tsb{2}S removal of the new MRU, according to B1 option}
+
+\fig{c/image6}{}
+
+{\bfseries Fig.3 - Parameters of the stripping column for
+H\tsb{2}S removal of the new MRU, according to B2 option}
+
+Saturated MWS with a pressure of about 2.7 bar after the reducing valve
+and a temperature of about 31.5 °C enters the input heat
+exchanger-heater MWS HEx-1 ``steam-liquid'' (1), in which it is heated
+to approximately 94.50 °C so that improve the separation of MWS from
+hydrocarbons carried away from the process lines of the gas treatment
+plant. After heating in HEx-1, the MWS enters the separator V-102 (2),
+which is also equipped with a coalescer filter for more complete removal
+of hydrocarbons from the MWS, since even a small number of dissolved
+hydrocarbons can form stable emulsions with the aqueous phase of the
+MWS. The pressure in the separator V-102 is maintained at 2.5-2.55 bar
+abs. At the same time, the separator V-102 serves to remove light
+hydrocarbon gases if they were captured by the MWS flow. It is assumed
+that the captured hydrocarbons, under their own pressure, are
+periodically discharged into the closed drainage system of the gas
+treatment plant, and the MWS enters the hydrocyclone (3) to remove the
+suspended solids, which are discharged from the bottom of the
+hydrocyclone. The MWS after the hydrocyclone passes through the HEx-2
+heat exchanger (4), where it is heated to 105 °C before entering the
+evaporator (5). The evaporator inside is equipped with a tube bundle
+into which water vapor (or any other heat-transfer medium) with a
+temperature of about 130-135 °C is supplied, which heats the MWS to 130
+°C, transferring the MWS to a completely vapor phase. In this case, the
+salts are removed from the bottom of the evaporator in the form of a
+brine solution. The MWS vapor stream leaving the evaporator preheats the
+MWS input stream in HEx-1 and the MWS stream before the evaporator in
+HEx-2.
+
+Before entering for regeneration, dissolved H\tsb{2}S must be
+removed from the MWS, because product methanol should not contain this
+extremely undesirable, highly toxic and corrosive component. To remove
+H\tsb{2}S, an evaporation column (7) is installed, consisting
+of the column itself, as well as:
+
+- top of the condenser column (ACU (6) or water cooler), reflux tank and
+reflux return pump;
+
+- the bottom of the reboiler column for heating the bottom liquid (water
+vapor can act as a heating agent).
+
+It is also possible to use hot oil as a heating agent, or to heat the
+bottom liquid directly in a fire heater: both of these options require
+fuel gas.
+
+MWS with a pressure of 2 bara and at a temperature of 45 °C enters the
+upper part of the evaporation column. According to calculations, the
+temperature of the upper product of the evaporation column after the
+reflux tank was 71.24 °C, the pressure was 1.9 bar, and the temperature
+of the bottom liquid was 107 °C. H\tsb{2}S with some water
+vapor, about 1.9-2 \% wt., after a reflux tank of 59.304
+Sm\tsp{3}pd (79.2 kg/day is discharged to the Low-Pressure
+Flare). Since the volume of gas after the stripper column is very small,
+this should not have a significant impact on greenhouse gas emissions.
+
+The MWS from the bottom of the evaporation column with a temperature of
+107 °C enters the middle part of the distillation column (8). Methanol
+is regenerated by rectification at a pressure of 1.9 bara and 2 bara and
+temperatures of 86 °C and 120 °C at the top and bottom of the column,
+respectively. The upper product of the column is methanol with a purity
+of at least 95 \% wt., the lower product is water (99.99 \% wt.) with a
+methanol concentration of no more than 0.01 \% wt. Water from the bottom
+of the column is discharged into the drainage system, and the
+regenerated methanol, having passed through the air cooler (9), where it
+is cooled to 45 °C, and the reflux tank is further supplied to the
+corresponding tank at the chemical reagent storage site (13). Part of
+the regenerated methanol after the reflux tank is supplied to the top of
+the column for reflux using a reflux pump.
+
+Additional pumps for pumping product methanol into the storage tank and
+bottom water into the drainage system are not needed, since the flow
+pressure is \textasciitilde1.8 and 1.85 bara, respectively, is
+sufficient for pumping.
+
+Since the water from the bottom of the column is already a fairly pure
+product, it can be introduced into the recycling cycle.
+
+According to the modeling results, the methanol product meets the
+specification requirements (Table 5).
+
+The simulation results were used to estimate capital costs according to
+AACE Class 5 {[}18{]}.
+
+{\bfseries Table 5} - {\bfseries Methanol Product Specifications}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3288}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3301}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3410}}@{}}
+%% \toprule\noalign{}
+%% \multirow{2}{=}{\begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Methanol to storage}
+%% \end{minipage}} &
+%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.6712} + 2\tabcolsep}@{}}{%
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Options}
+%% \end{minipage}} \\
+%% & \begin{minipage}[b]{\linewidth}\centering
+%% B1
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% B2
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Temperature, \tsp{о}С & 45 & 45 \\
+%% Pressure, bar & 1.55 & 1.55 \\
+%% \% Methanol recovery & 83.1 & 77.2 \\
+%% Mass flow, kg/h & 27.71 & 3.58 \\
+%% Methanol, \% wt & 95 & 95 \\
+%% Water, \% wt & 5 & 5 \\
+%% H\tsb{2}S, \% wt & 0 & 0 \\
+%% \end{longtable}
+
+At each stage of project implementation, the error of the calculated
+budget is specified, according to the AACE methodology, which is
+assigned a class:
+
+- from the first class with an error of 10 \% / 15 \%,
+
+- up to grade 5 with an error of 50 \% / +100 \%.
+
+Capital costs were calculated in the ASPEN Process Economic Analyzer
+(APEA) software package, based on modeling the operating process of the
+new MRU, with the definition of a list of main equipment (Table 6).
+
+{\bfseries Table 6 - List of main equipment}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0764}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1322}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2242}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3884}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1788}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries No.}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Item number}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Name}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Description}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Quantity, units}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Heat exchange equipment}} & 9 \\
+%% 1 & 1 & HE-1 & Input heater MWS & 1 \\
+%% 2 & 4 & HE-2 & MWS heater in front of the evaporator & 1 \\
+%% 3 & 6 & AC-1 & Air MWS cooler & 1 \\
+%% 4 & 9 & AC-2 & Air methanol product cooler & 1 \\
+%% 5 & 10 & AC-3 & Air water cooler & 1 \\
+%% 6 & 7.1 & C-Str & Stripper condenser & 1 \\
+%% 7 & 8.1 & С-Dist & Distillation column condenser & 1 \\
+%% 8 & 7.2 & R-Str & Stripper reboiler & 1 \\
+%% 9 & 8.2 & R-Dist & Distillation column reboiler & 1 \\
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Capacitive equipment}} & 1 \\
+%% 1 & 11 & Buffer Vessel & Water buffer capacity & 1 \\
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Separation equipment}} & 7 \\
+%% 1 & 2 & Inlet Separator & Input separator MWS & 1 \\
+%% 2 & 5 & Evaporator & Evaporator MWS & 1 \\
+%% 3 & 7.3 & RV-1 & Reflux tank of stripper column & 1 \\
+%% 4 & 8.3 & RV-2 & Reflux tank of distillation column & 1 \\
+%% 5 & 7 & Stripping column & Stripping column & 1 \\
+%% 6 & 8 & Distillation column & Distillation column & 1 \\
+%% 7 & 3 & Hydrocyclone & Hydrocyclone removal of TSP & 1 \\
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Pumps}} & 3 \\
+%% 1 & 12 & P-1 & Water pump & 1 \\
+%% 2 & 7.4 & RP-1 & Stripper Reflux Pump & 1 \\
+%% 3 & 8.4 & RP-2 & Distillation Column Reflux Pump & 1 \\
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Storage containers}} & 1 \\
+%% 1 & 13 & MeOH Storage & Methanol storage tank & 1 \\
+%% \multicolumn{4}{@{}>{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.8212} + 6\tabcolsep}}{%
+%% {\bfseries Total units of equipment}} & {\bfseries 21} \\
+%% \end{longtable}
+
+Based on the simulation of the operating process, the capital costs for
+the acquisition of a block-modular MRU were determined, considering the
+main equipment, materials and costs for the manufacture of modules
+(Table 7). When calculating the total cost of the project, considering
+the average complexity and level of uncertainty for this stage, based on
+the Operator's capital cost calculation standards, the following
+assumptions were made to increase the base estimate:
+
+- 40 \% allowance for possible unaccounted indicators for the items
+``Equipment'' and ``Construction and installation work'';
+
+- 30 \% contingency for all cost items.
+
+{\bfseries Table 7}- {\bfseries Results of calculating the cost of
+manufacturing a block-modular MRU}
+
+%% \begin{longtable}[]{@{}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2968}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3754}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3278}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\raggedright
+%% {\bfseries Name of costs}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Cost according to B1*}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Cost according to B 2*}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Equipment & 571~739 & 450~061 \\
+%% Pipelines & 777~477 & 408~296 \\
+%% Construction Materials & 699~031 & 493~684 \\
+%% Steel products & 68~145 & 63~348 \\
+%% Automation & 1~578~052 & 1~389~855 \\
+%% Electrical equipment & 981~802 & 979~736 \\
+%% Insulation & 236~172 & 93~602 \\
+%% Painting & 103~977 & 70~116 \\
+%% {\bfseries Total} & {\bfseries 5~016~395} & {\bfseries 3~948~699} \\
+%% \end{longtable}
+
+*\emph{Prices are in US dollars.}
+
+General and administrative expenses are assumed to be 15 \% of the total
+procurement and construction costs. The results of calculating capital
+costs are presented in Table 8.
+
+{\bfseries Table 8 - Results of calculating capital costs for project
+implementation by options}
+
+%% \begin{longtable}[]{@{}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4216}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2813}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2970}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Engineering}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Cost according to B1*}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries Cost according to B2*}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Basic Design & 985~877 & 626~943 \\
+%% Detailed design & 1~834~647 & 1~507~897 \\
+%% Equipment & 6~011~160 & 4~925~825 \\
+%% Manufacturing costs & 2~227~628 & 1~614~863 \\
+%% Construction and installation works & 3~293~171 & 1~919~150 \\
+%% General and administrative expenses & 1~331~037 & 975~620 \\
+%% {\bfseries Total for the Project} & {\bfseries 15~683~520} &
+%% {\bfseries 11~570~297} \\
+%% \end{longtable}
+
+\emph{*Prices are in US dollars.}
+
+Based on the results of calculating capital costs, an assessment of
+economic efficiency was made with the following indicators (Table 9).
+
+The economic assessment of the project with accepted forecast
+operational and current macroeconomic parameters and cost assumptions
+shows:
+
+- positive results (NPV≥0) with CAPEX not exceeding USD 2.6 million
+(base scenario) and USD 1.7 million (alternative scenario);
+
+- positive results (NPV≥0) with a methanol price of at least 5 172 USD/t
+(base scenario) and 6 132 USD/t (alternative scenario);
+
+- positive results (NPV≥0) with an annual methanol production volume of
+at least 3.2 thousand tons/year (base scenario) and 3 thousand t/year
+(alternative scenario).
+
+{\bfseries Table 9} - {\bfseries Economic assessment results}
+
+%% \begin{longtable}[]{@{}
+%%   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.7581}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1213}}
+%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1206}}@{}}
+%% \toprule\noalign{}
+%% \begin{minipage}[b]{\linewidth}\raggedright
+%% {\bfseries Indicators}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries В1}
+%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+%% {\bfseries В2}
+%% \end{minipage} \\
+%% \midrule\noalign{}
+%% \endhead
+%% \bottomrule\noalign{}
+%% \endlastfoot
+%% Calculation period &
+%% \multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2419} + 2\tabcolsep}@{}}{%
+%% 2023-2037} \\
+%% Cumulative volume of methanol production, thousand tons & 5.99 & 3.74 \\
+%% Annual methanol production, t & 570.00 & 356.00 \\
+%% Total cost of recovered methanol for the calculation period, million US
+%% dollars & 6.47 & 4.04 \\
+%% OPEX MOD, million US dollars & -1.84 & -1.36 \\
+%% CAPEX MOD, USD million & -16.72 & -12.33 \\
+%% NPV @10, million US dollars & -10.13 & -7.80 \\
+%% \multicolumn{3}{@{}>{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
+%% {\bfseries Break-even analysis}} \\
+%% CAPEX, USD & 2 566 657 & 1~722 828 \\
+%% Methanol price, USD/t & 5 172 & 6 132 \\
+%% Methanol volume, t/g. & 3 229 & 3 010 \\
+%% \end{longtable}
+
+{\bfseries Conclusions.} When modeling the existing methanol removal
+scheme, we found that the recovery rate was insufficient. To increase
+the efficiency of regeneration, it is necessary to supplement the
+process diagram with additional equipment for purification from
+mechanical impurities, salts, and hydrogen sulfide.
+
+We have determined the optimal technical and process parameters of the
+distillation column and hydrogen sulfide removal column. The product of
+the regeneration unit is a saturated 95 \% methanol solution.
+
+The study allowed us to determine the following:
+
+1. From an engineering point of view, the regeneration of methanol in
+CGTP conditions is quite feasible.
+
+2. Rectification of MWS is by far the most developed and widespread
+technology. There are a significant number of companies on the market
+that have extensive experience in the design and manufacture of MRU
+using the rectification method.
+
+3. The average annual yield of regenerated methanol at the specified
+volumes of MWS and methanol concentration will be: option B1 -- 570
+t/year, option B2 - 356 t/year.
+
+4. The low concentration of methanol in the MWS is due to the existing
+technological process, which allows only a small amount of methanol to
+be recovered from the process streams. The main volume of methanol is
+carried away with gas (about 15-20 \%) and condensate (70-75 \%).
+
+5. A prerequisite for the regeneration of methanol in CGTP conditions is
+at field ``X'' is the need for preliminary preparation of the MWS with
+the mandatory removal of hydrocarbons, mechanical impurities and acid
+gases.
+
+\emph{{\bfseries Funding:} This research was funded by the Science
+Committee of the Ministry of Science and Higher Education of the
+Republic of Kazakhstan (Grant No. AP19679527 and BR24992761).}
+
+{\bfseries References}
+
+1. Zanne M.,~Grčić M. Challenges of LNG (Liquefied Natural Gas) Carriers
+in 21" Century // Promet-Traffic \& Transportation. - 2009. - Vol.21
+(1).- P.49-60. \href{https://doi.org/10.7307/ptt.v21i1.912}{DOI
+10.7307/ptt.v21i1.912}.
+
+2. Mohammad N., Ishak W. W. M., Mustapa S. I., Ayodele B. V. Natural Gas
+as a Key Alternative Energy Source in Sustainable Renewable Energy
+Transition: A Mini Review // Front. Energy Res. -2021. - 9:625023. DOI
+\href{https://doi.org/10.3389/fenrg.2021.625023}{10.3389/fenrg.2021.625023}.
+
+3. Kang D. W., Lee W., Ahn Y. H., Kim K., \& Lee J. W. Facile and
+sustainable methane storage via clathrate hydrate formation with low
+dosage promoters in a sponge matrix // Energy. - 2024. -Vol.292:130631.
+DOI
+\href{https://doi.org/10.1016/j.energy.2024.130631}{10.1016/j.energy.2024.130631}
+
+4. Chakeeva K. S., Mombekova G. R., Kuzenbayeva E. R. The current state
+of the oil and gas industry of the Republic of Kazakhstan//State Audit.-
+2023. -Vol.2(59). - P.107.-117. DOI
+\href{https://doi.org/10.55871/2072-9847-2023-59-2-107-117}{10.55871/2072-9847-2023-59-2-107-117}
+
+5. Imangozhina Z.A. Sovremennoe sostojanie gazovoj otrasli Respubliki
+Kazahstan// Vestnik universiteta Turan. -2021.-№ 1 (89) - S.201-208.
+DOI
+\href{https://doi.org/10.46914/1562-2959-2021-1-1-201-208}{10.46914/1562-2959-2021-1-1-201-208}.
+
+{[}in Russian{]}
+
+6. Kaiser, M. J., \& Pulsipher, A. G. A review of the oil and gas sector
+in Kazakhstan // Energy Policy.- 2021.- Vol.35 (2). - P.1300 - 1304. DOI
+\href{http://dx.doi.org/10.1016/j.enpol.2006.03.020}{10.1016/j.enpol.2006.03.020}
+
+7. Maldynova A., Bodaukhan G., Aitkhojayeva G., Ilyas A., B.
+Murzabekova. Innovative Potential of the Oil and Gas Industry of
+Kazakhstan // Eurasian Journal of Economic and Business Studies. - 2023.
+- Vol.67 (2). - P.33-34. DOI 10.47703/ejebs.v2i67.253
+
+8. Besley D., Kohli S., Rahardja S., Knight D., Farole T., Collier J.
+B., et.al. ``Country Climate and Development Report (CCDR):
+KAZAKHSTAN,'' The World Bank Group, 1818 H Street NW, Washington, DC
+20433, 2022. {[}Online{]}. Available:
+\url{https://documents1.worldbank.org/curated/en/099420411012246024/pdf/P1773690ad92b401b089700f5be8659ecf0.pdf}.-
+Date of address: 26.05.2025
+
+9. Aregbe A. Gas Hydrate-Properties, Formation and Benefits // Open
+Journal of Yangtze Oil and Gas. - 2017.- Vol.2 (1). - P.27. DOI
+\href{https://doi.org/10.4236/ojogas.2017.21003}{10.4236/ojogas.2017.21003}
+
+10. You K., Flemings P. B., Malinverno A., Collett T. S., Darnell K.
+Mechanisms of Methane Hydrate Formation in Geological Systems // Reviews
+of Geophysics. - 2019.- Vol.57(41). - P.1146. DOI
+\href{https://doi.org/10.1029/2018RG000638}{10.1029/2018RG000638}
+
+11. Satenov K. G., Tkenbayev S. M., Tashenov Z. A., Akhmetov Z. E.,
+Kadyrov S. R. Kazakhstan journal for oil \& gas industry. - 2024.- Vol.
+6 (1).- P.99. DOI
+\href{https://doi.org/10.54859/kjogi108691}{10.54859/kjogi108691} {[}in
+Russian{]}
+
+12. Sayed A. E.-R., Ashour I., Gadalla M. Integrated process development
+for an optimum gas processing plant // Chemical Engineering Research and
+Design. - 2017. Vol.124.-P.114-123. DOI 10.1016/j.cherd.2017.05.031
+
+13. Mazumder M., Xu Q. Modeling and Optimization for a Comprehensive Gas
+Processing Plant with Sensitivity Analysis and Economic Evaluation
+//Chemical Engineering \& Technology. - 2020. -Vol.43 (11). - P.
+2198-2207. DOI
+\href{https://doi.org/1002/ceat.202000216}{1002/ceat.202000216}
+
+14. Teixeira A. M., Arinelli L. de O., de Medeiros J. L., de Q. F.
+Araújo O. Recovery of thermodynamic hydrate inhibitors methanol, ethanol
+and MEG with supersonic separators in offshore natural gas processing //
+Journal of Natural Gas Science and Engineering. - 2018. - Vol.52. -
+P.186-186. DOI
+\href{https://doi:10.1016/j.jngse.2018.01.038}{10.1016/j.jngse.2018.01.038}
+
+15. Yang Xiao, Shengbin Wu, Hantao Xia, Jinyuan Zhang, Lingling Ding,
+Xiaolong Bao, Yi Tang, Yongjie Qi. Simulation of and multi-aspect study
+of a novel trigeneration process for crude helium, liquefied natural
+gas, and methanol production; operation improvement and emission
+reduction // Fuel.-2023.-Vol.347: 128402. DOI
+\href{https://doi.org/10.1016/j.fuel.2023.128402}{10.1016/j.fuel.2023.128402}
+
+16. Stryjek R., Vera J. H. PRSV: An Improved Peng-Robinson Equation of
+State for Pure Compounds and Mixtures // Canadian Journal of Chemical
+Engineering.-1986.- Vol.64 (2).- P.323-333. DOI
+\href{https://doi:1002/cjce.5450640224}{1002/cjce.5450640224}
+
+17. Proust P., Vera J. H. PRSV: The Stryjek-Vera modification of the
+Peng-Robinson equation of state. Parameters for other pure compounds of
+industrial interest // Canadian Journal of Chemical
+Engineering.-1989.-Vol.67 (1). - P.170-173. DOI
+\href{https://doi.org/10.1002/cjce.5450670125}{10.1002/cjce.5450670125}
+
+18. AACE International Recommended Practice No.18R-97: Cost Estimate
+Classification System-As Applied In Engineering, Procurement, And
+Construction For The Process Industries. AACE International -- 2005.
+URL: \url{https://library.aacei.org/pgd01/pgd01.shtml}. Date of address:
+26.05.2025
+
+\emph{{\bfseries Information about the authors}}
+
+Satenov K. G. - candidate of Chemical Sciences, Acting Associate
+Professor, Kazakh University of Technology and Business named after K.
+Kulazhanov, Astana, Kazakhstan, e-mail:
+satenoff@mail.ru;
+
+Suleimen Ye.M. - Ph.D., Associate Professor, Kazakh University of
+Technology and Business named after. K. Kulazhanov, Astana, Kazakhstan,
+e-mail:
+syerlan75@yandex.kz
+
+\emph{{\bfseries Сведения об авторах}}
+
+Сатенов К. Г. - к.х.н., и.о. ассоциированного профессора, Казахский
+университет технологии и бизнеса им. К. Кулажанова, Астана, Казахстан,
+e-mail: satenoff@mail.ru;
+
+Сулеймен Е.М. - PhD, ассоциированный профессор, Казахский университет
+технологии и бизнеса им. К. Кулажанова, Астана, Казахстан, e-mail:
+syerlan75@yandex.kz.\

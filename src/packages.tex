@@ -232,9 +232,12 @@
 
 \newenvironment{header}{%
     \begin{center}%
-    \fontsize{11}{12}\selectfont % Slightly smaller line height for the header
+    \fontsize{11}{12}\selectfont%
+    \linespread{1.0}% Ensure consistent line spacing
+    \normalbaselineskip=12pt%
 }{%
     \end{center}%
+    \normalsize% Reset to document default after header
 }
 
 \newcommand{\swa}[2]{%
@@ -305,6 +308,10 @@
   \end{figure}%
 }
 
+% \figstart{Data visualization results}
+% \subfig[0.45\textwidth]{5cm}{chart1.png}{Performance metrics}
+% \subfig[0.45\textwidth]{5cm}{chart2.png}{Accuracy comparison}
+% \figend
 % Subfigure helper: \subfig[width]{height}{path}{caption}
 \newcommand{\subfig}[4][0.3\textwidth]{%
   \begin{subfigure}[t]{#1}
