@@ -361,25 +361,14 @@ processing of phosphate raw materials:
 1:1) (Figure 1).
 \end{multicols}
 
-\fig{c/image2}{}
-
-{\bfseries Synthetic gypsum}
-
-{\bfseries Cake of Module 1A}
-
-{\bfseries Module ССР}
-
-\begin{quote}
-{\bfseries Fig.1 -- Initial samples of the phosphate raw material
+\fig{c/image2}{Fig.1 -- Initial samples of the phosphate raw material
 processing waste}
-\end{quote}
 
 When conducting these studies, an aquatic laboratory culture of Daphnia
 magna of 1-day age was used as a test object (Figure 2).
 
-\fig{c/image3}{}
-
-{\bfseries Fig.2 - Daphnia magna}
+\begin{multicols}{2}
+\fig[0.2\textwidth]{c/image3}{Fig.2 - Daphnia magna}
 
 The studies were carried out in accordance with ST RK 17.1.4.01-95
 {[}14{]} standard and the Methodological Guide for Biotesting of Water
@@ -397,7 +386,9 @@ individuals, the test sample is considered toxic. The calculation of
 dead daphnia in the test water sample in comparison with the control is
 calculated using the formula {[}13{]}:
 
-\(A = \ \frac{(X_{c} - X_{t})}{X_{c}} \bullet 100,\ \%\) (1)
+\begin{equation}
+A = \ \frac{(X_{c} - X_{t})}{X_{c}} \cdot 100,\ \%
+\end{equation}
 
 where \(X_{c}\)is the arithmetic mean number of daphnia that survived in
 the control sample;
@@ -444,39 +435,6 @@ pump. The resulting leach extract was tested for toxicity.
 The biotesting procedure (determination of acute toxicity) was carried
 out for the test samples under the conditions specified in Table 1.
 
-{\bfseries Table 1 - Conditions for the biotesting procedure}
-
-%% \begin{longtable}[]{@{}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1274}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2718}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1919}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2241}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1848}}@{}}
-%% \toprule\noalign{}
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Sample No.
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Date: 22.02.2023
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Temperature, °C
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Dissolved
-%% 
-%% oxygen, mg/dm\tsp{3}
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% pH
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% 1 & Control & 24 & 7.5 & 8.21 \\
-%% 2 & Waste of the CCP module & 24 & 6.3 & 8.28 \\
-%% 3 & Waste of the CCP module + module 1A cake & 24 & 6.1 & 8.19 \\
-%% 4 & Cake of module 1A & 24 & 6.5 & 7.16 \\
-%% 5 & Synthetic gypsum & 24 & 6.9 & 7.55 \\
-%% \end{longtable}
-
 Using a 2-cm\tsp{3} glass pipette with a cut off and melted
 end, 10 specimens of daphnia at the age of 24 hours were transplanted
 into a glass and transferred into beakers with analyzed and cultivation
@@ -491,7 +449,73 @@ triplicate. Repetition for control samples is also threefold.10
 one-day-old daphnia were placed in each glass and exposed at a
 temperature of 22±2 °C for 48 hours. Before the start of biotesting,
 daphnia were fed.
+\end{multicols}
 
+\tcap{Table 1 - Conditions for the biotesting procedure}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  width = \linewidth,
+  colspec = {Q[65]Q[423]Q[117]Q[155]Q[58]},
+  cells = {c},
+  hlines,
+  vlines,
+}
+Sample No. & Date: 22.02.2023                         & Temperature, °C & {Dissolved\\oxygen, mg/dm\textsuperscript{3}} & pH   \\
+1          & Control                                  & 24              & 7.5                                           & 8.21 \\
+2          & Waste of the CCP module                  & 24              & 6.3                                           & 8.28 \\
+3          & Waste of the CCP module + module 1A cake & 24              & 6.1                                           & 8.19 \\
+4          & Cake of module 1A                        & 24              & 6.5                                           & 7.16 \\
+5          & Synthetic gypsum                         & 24              & 6.9                                           & 7.55 
+\end{longtblr}
+
+\tcap{Table 2 - Results of calculating the survival rate of daphnia}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  width = \linewidth,
+  colspec = {Q[227]Q[42]Q[42]Q[42]Q[54]Q[54]Q[54]Q[46]Q[46]Q[46]Q[44]Q[44]Q[44]Q[42]Q[42]Q[42]},
+  cells = {c},
+  cell{1}{1} = {r=4}{},
+  cell{1}{2} = {c=15}{0.684\linewidth},
+  cell{2}{2} = {c=3}{0.126\linewidth},
+  cell{2}{5} = {c=3}{0.162\linewidth},
+  cell{2}{8} = {c=3}{0.138\linewidth},
+  cell{2}{11} = {c=3}{0.132\linewidth},
+  cell{2}{14} = {c=3}{0.126\linewidth},
+  cell{3}{2} = {c=3}{0.126\linewidth},
+  cell{3}{5} = {c=3}{0.162\linewidth},
+  cell{3}{8} = {c=3}{0.138\linewidth},
+  cell{3}{11} = {c=3}{0.132\linewidth},
+  cell{3}{14} = {c=3}{0.126\linewidth},
+  cell{8}{2} = {c=3}{0.126\linewidth},
+  cell{8}{5} = {c=3}{0.162\linewidth},
+  cell{8}{8} = {c=3}{0.138\linewidth},
+  cell{8}{11} = {c=3}{0.132\linewidth},
+  cell{8}{14} = {c=3}{0.126\linewidth},
+  cell{9}{2} = {c=3}{0.126\linewidth},
+  cell{9}{5} = {c=3}{0.162\linewidth},
+  cell{9}{8} = {c=3}{0.138\linewidth},
+  cell{9}{11} = {c=3}{0.132\linewidth},
+  cell{9}{14} = {c=3}{0.126\linewidth},
+  vlines,
+  hline{1,5-10} = {-}{},
+  hline{2-4} = {2-16}{},
+}
+Duration of biotesting                         & Number of surviving daphnia, specimens &    &    &                         &    &    &                                         &    &    &                   &    &    &                   &    &    \\
+                                               & Control                                &    &    & Waste of the CCP module &    &    & {CCP module waste +\\cake of module 1A} &    &    & Cake of module 1A &    &    & Synthetic gypsum  &    &    \\
+                                               & No. of experiment                      &    &    & No. of experiment       &    &    & No. of experiment                       &    &    & No. of experiment &    &    & No. of experiment &    &    \\
+                                               & 1                                      & 2  & 3  & 1                       & 2  & 3  & 1                                       & 2  & 3  & 1                 & 2  & 3  & 1                 & 2  & 3  \\
+22.02.2023                                     & 10                                     & 10 & 10 & 10                      & 10 & 10 & 10                                      & 10 & 10 & 10                & 10 & 10 & 10                & 10 & 10 \\
+23.02.2023 (24 hours)                          & 10                                     & 10 & 10 & 2                       & 1  & 2  & 10                                      & 7  & 7  & 10                & 10 & 10 & 6                 & 6  & 8  \\
+24.02.2023 (48 hours)                          & 10                                     & 10 & 10 & 2                       & 1  & 2  & 10                                      & 6  & 5  & 10                & 10 & 10 & 6                 & 6  & 8  \\
+Average number of surviving daphnia, specimens & 10                                     &    &    & 1.7                     &    &    & 7                                       &    &    & 10                &    &    & 6.7               &    &    \\
+A, \%                                          & 0                                      &    &    & 83                      &    &    & 30                                      &    &    & 0                 &    &    & 33                &    &    
+\end{longtblr}
+
+\begin{multicols}{2}
 During the entire biotesting period, the crustaceans were not fed.
 Surviving daphnia were counted after 1, 6, 12, 24, and 48 hours.
 Crustaceans were considered survivors if they moved freely in the water
@@ -503,270 +527,79 @@ considered correct if the death of daphnia in the control did not exceed
 10\% for the entire observation period and the oxygen concentration in
 the test water at the end of the experiment was at least 2
 mg/dm\tsp{3} (Table 3).
+\end{multicols}
 
-{\bfseries Table 2 - Results of calculating the survival rate of daphnia}
 
-%% \begin{longtable}[]{@{}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1836}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0453}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0460}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0460}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0461}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0614}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0460}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0614}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0614}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0614}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0614}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0460}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0618}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0500}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0540}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0680}}@{}}
-%% \toprule\noalign{}
-%% \multirow{4}{=}{\begin{minipage}[b]{\linewidth}\centering
-%% Duration of biotesting
-%% \end{minipage}} &
-%% \multicolumn{15}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.8164} + 28\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Number of surviving daphnia, specimens
-%% \end{minipage}} \\
-%% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1373} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Control
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1535} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Waste of the CCP module
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1842} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% CCP module waste +
-%% 
-%% cake of module 1A
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1692} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Cake of module 1A
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1721} + 4\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Synthetic gypsum
-%% \end{minipage}} \\
-%% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1373} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% No. of experiment
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1535} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% No. of experiment
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1842} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% No. of experiment
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1692} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% No. of experiment
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1721} + 4\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% No. of experiment
-%% \end{minipage}} \\
-%% & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% 22.02.2023 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 & 10 &
-%% 10 & 10 & 10 \\
-%% 23.02.2023 (24 hours) & 10 & 10 & 10 & 2 & 1 & 2 & 10 & 7 & 7 & 10 & 10
-%% & 10 & 6 & 6 & 8 \\
-%% 24.02.2023 (48 hours) & 10 & 10 & 10 & 2 & 1 & 2 & 10 & 6 & 5 & 10 & 10
-%% & 10 & 6 & 6 & 8 \\
-%% Average number of surviving daphnia, specimens &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1373} + 4\tabcolsep}}{%
-%% 10} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1535} + 4\tabcolsep}}{%
-%% 1.7} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1842} + 4\tabcolsep}}{%
-%% 7} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1692} + 4\tabcolsep}}{%
-%% 10} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1721} + 4\tabcolsep}@{}}{%
-%% 6.7} \\
-%% A, \% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1373} + 4\tabcolsep}}{%
-%% 0} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1535} + 4\tabcolsep}}{%
-%% 83} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1842} + 4\tabcolsep}}{%
-%% 30} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1692} + 4\tabcolsep}}{%
-%% 0} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1721} + 4\tabcolsep}@{}}{%
-%% 33} \\
-%% \end{longtable}
+\tcap{Table 3 - Oxygen concentration in the tested samples at the end of the experiment}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  cells = {c},
+  hlines,
+  vlines,
+}
+Sample No. & After 96 hours                       & Dissolved oxygen, mg/dm\textsuperscript{3} \\
+1          & Control                              & 2.6                                        \\
+2          & Waste of the CCP module              & 2.4                                        \\
+3          & CCP module waste + cake of module 1A & 2.0                                        \\
+4          & Cake of module 1A                    & 2.4                                        \\
+5          & Synthetic gypsum                     & 2.5                                        
+\end{longtblr}
 
-{\bfseries Table 3 - Oxygen concentration in the tested samples at the end
-of the experiment}
-
-%% \begin{longtable}[]{@{}
-%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1406}}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4784}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3810}}@{}}
-%% \toprule\noalign{}
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Sample No.
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% After 96 hours
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Dissolved oxygen, mg/dm\tsp{3}
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% 1 & Control & 2.6 \\
-%% 2 & Waste of the CCP module & 2.4 \\
-%% 3 & CCP module waste + cake of module 1A & 2.0 \\
-%% 4 & Cake of module 1A & 2.4 \\
-%% 5 & Synthetic gypsum & 2.5 \\
-%% \end{longtable}
-
+\begin{multicols}{2}
 For the waste of the CCP module, a repeated biotesting procedure was
 carried out (dilution factor 10 times). The biotesting procedure
 (determination of acute toxicity) was carried out for the test sample
 under the conditions specified in Table 4. The results of the
 calculation after 48 hours are presented in Table 5.
+\end{multicols}
 
-{\bfseries Table 4 - Conditions for the biotesting procedure}
+\tcap{Table 4 - Conditions for the biotesting procedure}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  hlines,
+  vlines,
+}
+Date: 28.02.2023        & Temperature, °C & {Dissolved\\oxygen, mg/dm\textsuperscript{3}} & pH   \\
+Control                 & 24              & 7.5                                           & 8.15 \\
+Waste of the CCP module & 24              & 6.5                                           & 8.20 
+\end{longtblr}
 
-%% \begin{longtable}[]{@{}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3912}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2146}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1927}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2014}}@{}}
-%% \toprule\noalign{}
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Date: 28.02.2023
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Temperature, °C
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% Dissolved
-%% 
-%% oxygen, mg/dm\tsp{3}
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% pH
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% Control & 24 & 7.5 & 8.15 \\
-%% Waste of the CCP module & 24 & 6.5 & 8.20 \\
-%% \end{longtable}
+\tcap{Table 5 - Results of calculating the survival rate of daphnia}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  cells = {c},
+  cell{1}{1} = {r=4}{},
+  cell{1}{2} = {c=6}{0.426\linewidth},
+  cell{2}{2} = {c=3}{0.15\linewidth},
+  cell{2}{5} = {c=3}{0.276\linewidth},
+  cell{3}{2} = {c=3}{0.15\linewidth},
+  cell{3}{5} = {c=3}{0.276\linewidth},
+  cell{8}{2} = {c=3}{0.15\linewidth},
+  cell{8}{5} = {c=3}{0.276\linewidth},
+  cell{9}{2} = {c=3}{0.15\linewidth},
+  cell{9}{5} = {c=3}{0.276\linewidth},
+  vlines,
+  hline{1,5-10} = {-}{},
+  hline{2-4} = {2-7}{},
+}
+Duration of biotesting                         & Number of surviving daphnia, specimens &    &    &                  &    &    \\
+                                               & Control                                &    &    & CCP module waste &    &    \\
+                                               & repetition                             &    &    & repetition       &    &    \\
+                                               & 1                                      & 2  & 3  & 1                & 2  & 3  \\
+28.02.2023                                     & 10                                     & 10 & 10 & 10               & 10 & 10 \\
+01.03.2023 (24 hours)                          & 10                                     & 10 & 10 & 10               & 10 & 10 \\
+02.03.2023 (48 hours)                          & 10                                     & 10 & 10 & 10               & 9  & 9  \\
+Average number of surviving daphnia, specimens & 10                                     &    &    & 9.3              &    &    \\
+A, \%                                          & 0                                      &    &    & 7                &    &    
+\end{longtblr}
 
-{\bfseries Table 5 - Results of calculating the survival rate of daphnia}
-
-%% \begin{longtable}[]{@{}
-%%   >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.4882}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0765}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0925}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0770}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1084}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1084}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0488}}@{}}
-%% \toprule\noalign{}
-%% \multirow{4}{=}{\begin{minipage}[b]{\linewidth}\centering
-%% Duration of biotesting
-%% \end{minipage}} &
-%% \multicolumn{6}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.5118} + 10\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Number of surviving daphnia, specimens
-%% \end{minipage}} \\
-%% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2460} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% Control
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2657} + 4\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% CCP module waste
-%% \end{minipage}} \\
-%% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2460} + 4\tabcolsep}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% repetition
-%% \end{minipage}} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2657} + 4\tabcolsep}@{}}{%
-%% \begin{minipage}[b]{\linewidth}\centering
-%% repetition
-%% \end{minipage}} \\
-%% & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 1
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 2
-%% \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-%% 3
-%% \end{minipage} \\
-%% \midrule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% 28.02.2023 & 10 & 10 & 10 & 10 & 10 & 10 \\
-%% 01.03.2023 (24 hours) & 10 & 10 & 10 & 10 & 10 & 10 \\
-%% 02.03.2023 (48 hours) & 10 & 10 & 10 & 10 & 9 & 9 \\
-%% Average number of surviving daphnia, specimens &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2460} + 4\tabcolsep}}{%
-%% 10} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2657} + 4\tabcolsep}@{}}{%
-%% 9.3} \\
-%% A, \% &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2460} + 4\tabcolsep}}{%
-%% 0} &
-%% \multicolumn{3}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2657} + 4\tabcolsep}@{}}{%
-%% 7} \\
-%% \end{longtable}
-
+\begin{multicols}{2}
 {\bfseries Results and discussion.} As a result of the experiment, it was
 established that the survival rate of aquatic organisms in experimental
 samples (compared to the control sample) is:
@@ -791,74 +624,27 @@ organisms was 93\%) based on the dilution factor of the aqueous extract
 (10 times), at which no impact on aquatic organisms was detected in
 accordance with the dilution factor ranges (Table 6), hazard class 4 was
 established.
+\end{multicols}
 
-{\bfseries Table 6 - Assignment of hazard class according to the dilution
-factor of the aqueous extract}
+\tcap{Table 6 - Assignment of hazard class according to the dilution factor of the aqueous extract}
+\begin{longtblr}[
+  label = none,
+  entry = none,
+]{
+  colspec = {Q[152]Q[790]},
+  cells = {c},
+  hlines,
+  vlines,
+}
+Waste hazard class & Dilution factor of the aqueous extract from hazardous waste, at which there is no harmful effect on aquatic organisms \\
+I                  & 10,000                                                                                                                \\
+II                 & From 10,000 to 1,001                                                                                                  \\
+III                & From 1,000 to 101                                                                                                     \\
+IV                 & 100                                                                                                                   \\
+V                  & 1                                                                                                                     
+\end{longtblr}
 
-%% \begin{longtable}[]{@{}
-%%   >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2586}}
-%%   >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7414}}@{}}
-%% \toprule\noalign{}
-%% \endhead
-%% \bottomrule\noalign{}
-%% \endlastfoot
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% Waste hazard class
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% Dilution factor of the aqueous extract from hazardous waste, at which
-%% there is no harmful effect on aquatic organisms
-%% \end{quote}
-%% \end{minipage} \\
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% I
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% \textgreater10,000
-%% \end{quote}
-%% \end{minipage} \\
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% II
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% From 10,000 to 1,001
-%% \end{quote}
-%% \end{minipage} \\
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% III
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% From 1,000 to 101
-%% \end{quote}
-%% \end{minipage} \\
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% IV
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% \textless100
-%% \end{quote}
-%% \end{minipage} \\
-%% \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% V
-%% \end{quote}
-%% \end{minipage} & \begin{minipage}[t]{\linewidth}\centering
-%% \begin{quote}
-%% 1
-%% \end{quote}
-%% \end{minipage} \\
-%% \end{longtable}
-
+\begin{multicols}{2}
 {\bfseries Conclusion.} Even though there is no universal test system for
 determining all existing toxicants, biotesting as an integral assessment
 method is successfully used as an environmental monitoring tool.
@@ -887,9 +673,13 @@ accordance with the dilution factor ranges, is assigned to the fourth
 hazard class (low hazard) for the environment. The results obtained
 allowed to conclude that the studied waste is acceptable for safe
 storage (under controlled conditions) and further processing.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{refs}
 1. Goncharuk V.V., Pleteneva T.V., Rudenko A.V., Syroeshkin A.V.,
 Kovalenko V.F., Uspenskaya E.V., Saprykina M.N., Zlatskiy I.A. Basic
 principles of comprehensive biotesting of drinking water and point
@@ -906,8 +696,7 @@ Conference Series: Earth and Environmental Science.- 2019. - Vol.315:
 3. Starostina I.,~Vasilenko T.,~Simonov~M., Pendurin E. Evaluating
 Toxicological Properties of Claydite Gravel, Containing Ferrovanadium
 Production Sludge, by Method of Biotesting with the of Higher
-Plants//E3S Web Conferences.- 2019.- Vol.126:00068.
-
+Plants // E3S Web Conferences.- 2019.- Vol.126:00068.
 DOI 10.1051/e3sconf/201912600068
 
 4. Bushumov S., Korotkova T., Ksandopulo S., Solonnikova N., Demin V.
@@ -921,13 +710,13 @@ Notes of Crimean V. I. Vernadsky Federal University Biology. Chemistry.
 2022. - Vol.8 (74). - P.87--92
 
 6. Lushchay Е.А., Ivanov D.E., Tikhomirova E.I. Development and
-Efficiency Assessment of New Methods on Rapid Assessment of Toxicity in
+Efficiency Assessment of New Meth\-ods on Rapid Assessment of Toxicity in
 Environmental Monitoring // Povolzhskiy Journal of Ecology. - 2019. -
 Vol.4. - P.458-469. DOI 10.35885/1684-7318-2019-4-458-469
 
 7. Morachevskaya E.V., Voronina L.P. Bioassay as a method of integral
 assessment for remediation of oil-contaminated ecosystems // Theoretical
-and Applied Ecology. - 2022. - Vol.1. - P.34-43. DOI
+and Applied Ecology. - 2022. - Vol.1. - P.34-43. DOI\\
 10.25750/1995-4301-2022-1-034-043
 
 8. Goncharova E.N., Kurzenev I.R., Vasilenko M.I., Pendjurin E.A.
@@ -951,12 +740,12 @@ kar'' era // Biosfera.- 2020. -T.12(1-2).
 - S.1-11. DOI 10.24855/BIOSFERA.V12I1.539. {[}in Russian{]}
 
 11. Kuzubova E., Grigorenko N., Shaidorova G., Ogneva Z., Potapova M.
-Biotesting of Soil Contamination of Agricultural Land Prokhorovsky
+Biotesting of Soil Contamina\-tion of Agricultural Land Prokhorovsky
 District of the Belgorod Region // Engineering Proceedings.~- 2023. -
 Vol.37(1):44. DOI 10.3390/ECP2023-14657
 
 12. Jurlov A.A., Suncova N.A., Musihina T.A., Zemcova E.A., Koshkina
-N.A., Devjaterikova S.V., Kazienkov S.A. Vlijanie stokov proizvodstva
+N.A., Devjaterikova S.V., Kazi\-enkov S.A. Vlijanie stokov proizvodstva
 ftorpolimerov na biotu // Voda i jekologija: problemy i reshenija.-
 2018. -№ 3(75). - S.76-84. DOI 10.23968/2305--3488.2018.20.3.76--84
 {[}in Russian{]}
@@ -971,27 +760,29 @@ gosudarstvennogo jekologicheskogo kontrolja. Moskva.: «AKVAROS», 2007. -
 14. ST RK 17.1.4.01-95 Ohrana prirody. Gidrosfera. Metodika opredelenija
 ostroj toksichnosti vody na dafnijah. Gosudarstvennyj standart
 Respubliki Kazahstan, Komitet po standartizacii, metrologii i
-sertifikacii Respubliki Kazahstan. Almaty. - 1996 {[}in Russian{]}
+sertifika\-cii Respubliki Kazahstan. Almaty. - 1996 {[}in Russian{]}
 
 15. RD 118-02-90 Miheev N.N. Rukovodstvo po opredeleniju metodom
 biotestirovanija toksichnosti vod, donnyh otlozhenij, zagrjaznjajushhih
 veshhestv i burovyh rastvorov. RJeFIA, NIA-Priroda Moskva. - 2002. {[}in
 Russian{]}
+\end{refs}
 
+\begin{info}
 \emph{{\bfseries Information about the authors}}
 
 Seraya N.V. - candidate of Chemical Sciences, Professor of D. Serikbayev
-East Kazakhstan Technical University, Ust-Kamenogorsk\emph{,}
+East Kazakhstan Technical University, \\Ust-Kamenogorsk,
 Kazakhstan, e-mail:
 nseraya@mail.ru;
 
 Litvinov V.V. - deputy director of Proektno-ekologicheskoe bjuro LLP,
-Ust-Kamenogorsk, Kazakhstan, e-mail:
+Ust-Kamenogorsk, Kazakhstan, e-mail:\\
 litvinov\_vadim@mail.ru;
 
 Daumova G.K. - candidate of Technical Sciences, Professor of
 D.Serikbayev East Kazakhstan Technical University,
-Ust-Kamenogorsk\emph{,} Kazakhstan, е-mail:
+Ust-Kamenogorsk, Kazakhstan, е-mail:
 gulzhan.daumova@mail.ru;
 
 Yelubay M.A. - candidate of Chemical Sciences, Professor of Toraighyrov
@@ -999,9 +790,9 @@ University, Pavlodar, Kazakhstan; Researcher, Humboldt-Innovation GmbH,
 Berlin, Germany. e-mail: m.yelubay@gmail.com;
 
 Kulmagambetova E.A. - candidate of Chemical Sciences, Senior Researcher
-at the Department of Biomonitoring and Occupational Hygiene of the
+at the Department of Biomonitoring and Occupa\-tional Hygiene of the
 RRIOSH of the Ministry of Health of the Republic of Kazakhstan, Astana,
-Kazakhstan, e-mail:
+Kazakhstan, e-mail:\\
 elya\_kulmagambet@mail.ru;
 
 Woszczyk M. - Ph.D., associate professor, Biogeochemistry Research Unit,
@@ -1011,7 +802,7 @@ woszczyk@amu.edu.pl.
 \emph{{\bfseries Сведения об авторах}}
 
 Серая Н.В. - кандидат химических наук, профессор Восточно-Казахстанского
-технического университета им. Д.Серикбаева, Усть-Каменогорск, Казахстан,
+технического университета им. \\Д.Серикбаева, Усть-Каменогорск, Казахстан,
 е-mail: nseraya@mail.ru;
 
 Литвинов В.В. - заместитель директора ТОО «Проектно-экологическое бюро»,
@@ -1037,3 +828,4 @@ elya\_kulmagambet@mail.ru;
 Woszczyk M. - доцент, исследовательский отдел биогеохимии, Университет
 Адама Мицкевича, Познань, Польша, е-mail:
 woszczyk@amu.edu.pl.
+\end{info}

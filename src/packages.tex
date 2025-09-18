@@ -330,10 +330,10 @@
 
 % End multi-subfigure environment: \figend
 \newcommand{\figend}{%
-    \ifx\maincaption\empty%
-      \caption*{}%
-    \else%
-      \caption*{\maincaption}%
-    \fi%
+  \ifx\maincaption\empty%
+    % Do nothing - no caption at all
+  \else%
+    \caption*{\maincaption}%
+  \fi%
   \end{figure}%
 }
